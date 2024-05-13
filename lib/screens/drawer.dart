@@ -21,7 +21,7 @@ class MyDrawer extends StatelessWidget {
             child: Container(
               color: Colors.blue,
               width: double.infinity,
-              child: Text("Amanu Application"),
+              child: const Text("Amanu Application"),
             ),
           ),
           BlocBuilder<TasksBloc, TaskState>(builder: (context, state) {
@@ -30,13 +30,14 @@ class MyDrawer extends StatelessWidget {
                 Navigator.of(context).pushReplacementNamed(TasksScreen.id);
               },
               child: ListTile(
-                leading: Icon(Icons.folder_special),
-                title: Text("My Task"),
+                leading:const  Icon(Icons.folder_special),
+                title: const Text("My Task"),
                 trailing: Text('${state.allTask.length}'),
               ),
             );
           }),
           const Divider(thickness: 3, color: Colors.blue),
+
           GestureDetector(
             onTap: (() => Navigator.of(context).pushReplacementNamed(RecycleBin.id)),
             child: const ListTile(
@@ -45,6 +46,7 @@ class MyDrawer extends StatelessWidget {
               trailing: Text("0"),
             ),
           )
+          
         ],
       )),
     );

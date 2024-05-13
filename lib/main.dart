@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_tasks_app/blocs/bloc/task_bloc.dart';
-import 'package:flutter_tasks_app/blocs/bloc/tast_event.dart';
-import 'package:flutter_tasks_app/models/task.dart';
+
 import 'package:flutter_tasks_app/screens/app_router.dart';
 
 import 'screens/tasks_screen.dart';
