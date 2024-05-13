@@ -1,0 +1,17 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_tasks_app/models/task.dart';
+import 'package:flutter_tasks_app/screens/recycle_bin.dart';
+import 'package:flutter_tasks_app/screens/tasks_screen.dart';
+
+class AppRouter {
+  Route? onGenerateRoute(RouteSettings routeSettings) {
+    switch (routeSettings.name) {
+      case RecycleBin.id:
+        return MaterialPageRoute(builder: (_) => RecycleBin());
+      case TasksScreen.id:
+        return MaterialPageRoute(builder: (_) => TasksScreen());
+      default:
+        return null;
+    }
+  }
+}
